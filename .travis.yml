@@ -1,0 +1,10 @@
+#We use java
+language: java
+
+#We add java development kit
+jdk:
+- openjdk8
+
+script:
+
+- cat $HOME/.m2/settings.xml
