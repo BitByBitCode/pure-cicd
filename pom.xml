@@ -74,7 +74,7 @@
 						</goals>
 					</execution>
 				</executions>
-				<!--
+				
 	            <configuration>
 	                <repository>${docker.image.prefix}/${project.artifactId}</repository>
 					<buildArgs>
@@ -84,14 +84,16 @@
 	      		<registryUrl>https://index.docker.io:443/v1/</registryUrl>
 	            </configuration>
 				
-				-->
+				<!--
 				<configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                     <imageTags>
                         <imageTag>${project.version}</imageTag>
                         <imageTag>latest</imageTag>
                     </imageTags>
+					-->
                     <!-- optionally overwrite tags every time image is built with docker:build -->
+					<!--
                     <forceTags>true</forceTags>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <buildArgs>
@@ -105,7 +107,7 @@
                         </resource>
                     </resources>
                 </configuration>
-				
+				-->
 				
         	</plugin>
 			<!-- maven-dependency-plugin useful for creating docker image -->
